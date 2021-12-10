@@ -1,0 +1,21 @@
+.row {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 10px;
+  border: 1px solid black;
+  border-radius: 5px;
+  padding-top: 15px;
+
+  .video-title{
+      font-weight: bolder;
+  }
+  .video-link{
+    background-color: rgb(255, 45, 175);
+    color: white;
+    cursor: pointer;
+    text-decoration: none;
+    padding: 5px;
+    &:hover {
+      background-color: #237aeb;
+    }
+  }
+}

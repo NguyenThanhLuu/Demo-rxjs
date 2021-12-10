@@ -1,0 +1,47 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-12 col-md-12">
+      <!-- Input Field -->
+      <div class="search">
+        <form class="search-form">
+          <mat-form-field class="search-bar" appearance="fill">
+            <input (keyup.enter)="onSearchType($event)" name="search" matInput placeholder="Search..." />
+          </mat-form-field>
+        </form>
+      </div>
+    </div>
+    <div class="col-12 col-md-12">
+      <!-- Search Filters -->
+      <div id="search-settings">
+        <div class="setting-content">
+          <!-- Order -->
+          <div class="setting-order">
+            <button mat-button [matMenuTriggerFor]="menu">
+              <mat-icon class="setting-icon">reorder</mat-icon>
+              <span class="setting-title">Order</span>
+            </button>
+            <mat-menu #menu="matMenu">
+              <button mat-menu-item *ngFor="let option of orderOpts" (click)="orderChage(option)" class="setting-menu">
+                {{ option }}
+              </button>
+            </mat-menu>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-12 col-md-12">
+      <!-- Video Search Result -->
+      <div class="video-list">
+        <app-video-list [videos]="videosSlice"></app-video-list>
+      </div>
+    </div>
+    <!--Video detail-->
+    <div class="col-12 col-md-12">
+      <router-outlet></router-outlet>
+    </div>
+    <div class="col-12 col-md-12">
+      <app-pagination id="pagination" [pageIndexs]="pageIndexs" [pageIndex]="pageIndex"
+        (onPageClick)="handlePageChange($event)"></app-pagination>
+    </div>
+  </div>
+</div>

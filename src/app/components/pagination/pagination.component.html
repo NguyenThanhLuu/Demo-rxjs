@@ -1,0 +1,28 @@
+<button
+  [disabled]="pageIndex - 1 < 1"
+  class="page-btn"
+  mat-stroked-button
+  color="accent"
+  (click)="onPageClick.emit(pageIndex - 1)"
+>
+  <<
+</button>
+<button
+  *ngFor="let page of pageIndexs"
+  class="page-btn"
+  [ngClass]="{ active: page === pageIndex }"
+  mat-stroked-button
+  color="accent"
+  (click)="onPageClick.emit(page)"
+>
+  {{ page }}
+</button>
+<button
+  [disabled]="pageIndex + 1 > pageIndexs.length"
+  class="page-btn"
+  mat-stroked-button
+  color="accent"
+  (click)="onPageClick.emit(pageIndex + 1)"
+>
+  >>
+</button>

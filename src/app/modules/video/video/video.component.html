@@ -1,0 +1,24 @@
+<div class="container">
+  <div class="row">
+    <div class="col-12 col-md-4">
+      <img
+      class="video-thumbnail"
+      [src]="video.snippet.thumbnails.medium.url"
+      alt="thumbnail"
+    />
+    </div>
+    <div class="col-12 col-md-8">
+      <div class="content">
+        <h1 class="video-title">
+          {{ video.snippet.title}}
+        </h1>
+        <p class="video-description"><b>Description: </b>{{ video.snippet.description }}</p>
+        <p class="video-publishTime">
+          <b>Publish date: </b>{{ video.snippet.publishTime | date }}
+        </p>
+        <p class="video-channel"><b>Channel title: </b>{{ video.snippet.channelTitle }}
+        <a class="video-link" (click)="openDialog()">Open full video</a></p>
+        </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,23 @@
+.search { // search-bar thì có thể dùng &-bar để thay thế trong scss
+  padding-top: 20px;
+  &-form {
+    width: 100%;
+    display: flex;
+  }
+  &-bar {
+    width: 100%;
+    padding: 0px 60px;
+    max-width: 100vw;
+    font-size: 18px;
+  }
+}
+
+.video-list {
+  width: 100%;
+  padding-top: 15px;
+}
+
+#pagination {
+  float: right;
+  
+}

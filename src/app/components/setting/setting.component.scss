@@ -1,0 +1,19 @@
+#settings-dialog {
+  padding: 50px;
+  font-size: 24px;
+}
+
+mat-form-field {
+  width: 500px;
+}
+
+#setting-form {
+  display: flex;
+  flex-direction: column;
+}
+
+#save-btn {
+  margin-left: auto;
+  font-size: 20px;
+  padding: 10px 20px;
+}
